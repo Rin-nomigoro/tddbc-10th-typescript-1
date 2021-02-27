@@ -5,8 +5,7 @@ describe('gomashio', () => {
         expect(true).toBeTruthy();
     });
 
-    test('gomashio test', () => {
-        // formatチェック用にインデントを崩しておく。
+    it('gomashio test', () => {
         expect(gomashio()).toBe(1);
     });
 });
