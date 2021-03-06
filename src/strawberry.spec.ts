@@ -1,4 +1,5 @@
 import { Strawberry, format } from './strawberry';
+
 it('テストが動くかどうか', () => {});
 
 describe('Strawberry', () => {
@@ -24,17 +25,16 @@ describe('Strawberry', () => {
 });
 
 describe('format', () => {
-    it('品種:あまおう、サイズ:Sを入力し、文字列表現「あまおう: S」を取得できること', () => {
-        const variety = 'あまおう';
-        const size = 'S';
-        const strawberry = new Strawberry(variety, size);
-        expect(format(strawberry)).toBe('あまおう: S');
-    });
-
-    it('品種:とちおとめ、サイズ:Mを入力し、文字列表現「あまおう: S」を取得できること', () => {
-        const variety = 'とちおとめ';
-        const size = 'M';
-        const strawberry = new Strawberry(variety, size);
-        expect(format(strawberry)).toBe('とちおとめ: M');
-    });
+    test.each([
+        ['あまおう', 'S', 'あまおう: S'],
+        ['とちおとめ', 'M', 'とちおとめ: M'],
+        ['もういっこ', 'L', 'もういっこ: L'],
+        ['もういっこ', 'LL', 'もういっこ: LL'],
+    ])(
+        '品種:%s、サイズ:%sを入力し、文字列表現「%s」」を取得できること',
+        (variety, size, expected) => {
+            const strawberry = new Strawberry(variety, size);
+            expect(format(strawberry)).toBe(expected);
+        }
+    );
 });

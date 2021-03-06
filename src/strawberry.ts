@@ -1,18 +1,3 @@
-// const VARIETY = {
-//     あまおう: 'あまおう',
-//     とちおとめ: 'とちおとめ',
-//     もういっこ: 'もういっこ',
-// } as const;
-// type VARIETY_TYPE = keyof typeof VARIETY;
-
-// const SIZE = {
-//     S: 'S',
-//     M: 'M',
-//     L: 'L',
-//     LL: 'LL',
-// } as const;
-// type SIZE_TYPE = keyof typeof SIZE;
-
 export class Strawberry {
     variety: string;
     size: string;
