@@ -37,12 +37,12 @@ export class Strawberry {
         throw new Error('Error: 1g以上の重さを入力してください。');
     }
 
+    get label() {
+        return `${this.variety}: ${this.size}`;
+    }
+
     constructor(variety: string, weight: number) {
         this.variety = variety;
         this.weight = weight;
     }
-}
-
-export function format(strawberry: Strawberry) {
-    return `${strawberry.variety}: ${strawberry.size}`;
 }

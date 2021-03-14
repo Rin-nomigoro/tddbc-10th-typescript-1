@@ -1,4 +1,4 @@
-import { Strawberry, format } from './strawberry';
+import { Strawberry } from './strawberry';
 
 it('テストが動くかどうか', () => {});
 
@@ -40,21 +40,21 @@ describe('Strawberry', () => {
             }
         );
     });
-});
 
-describe('format', () => {
-    describe('いちごオブジェクトの文字列表現を受け取る。', () => {
-        test.each([
-            ['あまおう', 1, 'あまおう: S'],
-            ['とちおとめ', 10, 'とちおとめ: M'],
-            ['もういっこ', 20, 'もういっこ: L'],
-            ['もういっこ', 25, 'もういっこ: LL'],
-        ])(
-            '品種:%s、重さ:%dgと入力し、文字列表現「%s」を取得できること',
-            (variety, weight, expected) => {
-                const strawberry = new Strawberry(variety, weight);
-                expect(format(strawberry)).toBe(expected);
-            }
-        );
+    describe('label', () => {
+        describe('いちごオブジェクトの文字列表現を受け取る。', () => {
+            test.each([
+                ['あまおう', 1, 'あまおう: S'],
+                ['とちおとめ', 10, 'とちおとめ: M'],
+                ['もういっこ', 20, 'もういっこ: L'],
+                ['もういっこ', 25, 'もういっこ: LL'],
+            ])(
+                '品種:%s、重さ:%dgと入力し、文字列表現「%s」を取得できること',
+                (variety, weight, expected) => {
+                    const strawberry = new Strawberry(variety, weight);
+                    expect(strawberry.label).toBe(expected);
+                }
+            );
+        });
     });
 });
