@@ -1,26 +1,26 @@
-import { Strawberry2, format2, weightToSize } from './strawberry2';
+import { Strawberry, format, weightToSize } from './strawberry';
 
 it('テストが動くかどうか', () => {});
 
-describe('Strawberry2', () => {
+describe('Strawberry', () => {
     const variety = 'いちごの品種名';
     const weight = 1000;
-    let strawberry2: Strawberry2;
+    let strawberry: Strawberry;
 
     beforeEach(() => {
-        strawberry2 = new Strawberry2(variety, weight);
+        strawberry = new Strawberry(variety, weight);
     });
 
-    it('品種と重さを入力して、Strawberry2オブジェクトを取得できること。', () => {
-        expect(strawberry2).toBeTruthy();
+    it('品種と重さを入力して、Strawberryオブジェクトを取得できること。', () => {
+        expect(strawberry).toBeTruthy();
     });
 
-    it('入力した品種の文字列とStrawberry2オブジェクトの品種の文字列が一致すること', () => {
-        expect(strawberry2.variety).toBe(variety);
+    it('入力した品種の文字列とStrawberryオブジェクトの品種の文字列が一致すること', () => {
+        expect(strawberry.variety).toBe(variety);
     });
 
-    it('入力した重さの数値とStrawberry2オブジェクトの重さの数値が一致すること', () => {
-        expect(strawberry2.weight).toBe(weight);
+    it('入力した重さの数値とStrawberryオブジェクトの重さの数値が一致すること', () => {
+        expect(strawberry.weight).toBe(weight);
     });
 });
 
@@ -37,14 +37,14 @@ describe('weightToSize', () => {
         ])(
             'いちごの重さに%dgと入力し、サイズが%sと取得できること',
             (weight, expectedSize) => {
-                const strawberry2 = new Strawberry2('いちごの品種名', weight);
-                expect(weightToSize(strawberry2)).toBe(expectedSize);
+                const strawberry = new Strawberry('いちごの品種名', weight);
+                expect(weightToSize(strawberry)).toBe(expectedSize);
             }
         );
     });
 });
 
-describe('format2', () => {
+describe('format', () => {
     describe('いちごオブジェクトの文字列表現を受け取る。', () => {
         test.each([
             ['あまおう', 1, 'あまおう: S'],
@@ -54,8 +54,8 @@ describe('format2', () => {
         ])(
             '品種:%s、重さ:%dgと入力し、文字列表現「%s」を取得できること',
             (variety, weight, expected) => {
-                const strawberry2 = new Strawberry2(variety, weight);
-                expect(format2(strawberry2)).toBe(expected);
+                const strawberry = new Strawberry(variety, weight);
+                expect(format(strawberry)).toBe(expected);
             }
         );
     });

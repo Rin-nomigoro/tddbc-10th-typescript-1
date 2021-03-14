@@ -63,7 +63,7 @@ v0.1(TODO 洗い出し)
   - [x] 品種:もういっこ、重さ:20を入力し、文字列表現「もういっこ: L」を取得できること。
   - [x] 品種:もういっこ、重さ:25を入力し、文字列表現「もういっこ: LL」を取得できること。
 
-- [] Strawberryに関わるコードを削除する。
+- [x] Strawberryに関わるコードを削除する。
   - [x] まずStrawberryを削除する為のTODOを洗い出すこと!!
   - [x] 🍓→🍓2への移行作業
     - [x] モジュール分割を行う
@@ -71,5 +71,5 @@ v0.1(TODO 洗い出し)
       - [x] strawberry.tsからStrawberry2に関わるプロダクトコードをstrawberry2.tsに移行する
     - [x] strawberry.spec.tsを削除する
     - [x] strawberry.tsを削除する
-    - [] strawberry2ファイルをstrawberryファイルへリネームする
+    - [x] strawberry2ファイルをstrawberryファイルへリネームする
 
