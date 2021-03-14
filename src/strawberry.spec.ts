@@ -25,15 +25,15 @@ describe('Strawberry', () => {
 
     describe('入力した重さを基にサイズが取得できること', () => {
         test.each([
-            [1, 'S'], // 1gはSサイズの下限
-            [9, 'S'], // 9gはSサイズの上限
-            [10, 'M'], // 10gはMサイズの下限
-            [19, 'M'], // 19gはMサイズの上限
-            [20, 'L'], // 20gはLサイズの下限
-            [24, 'L'], // 24gはLサイズの上限
-            [25, 'LL'], // 25gはLLサイズの下限
+            [1, 'S'],
+            [9, 'S'],
+            [10, 'M'],
+            [19, 'M'],
+            [20, 'L'],
+            [24, 'L'],
+            [25, 'LL'],
         ])(
-            '入力した重さに%dgと入力し、サイズが%sと取得できること',
+            '入力した重さに%dgと入力し、サイズが%sと取得できること ',
             (weight, expectedSize) => {
                 const strawberry = new Strawberry('いちごの品種名', weight);
                 expect(strawberry.size).toBe(expectedSize);

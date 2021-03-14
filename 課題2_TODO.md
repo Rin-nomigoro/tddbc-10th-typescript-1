@@ -73,3 +73,4 @@ v0.1(TODO 洗い出し)
     - [x] strawberry.tsを削除する
     - [x] strawberry2ファイルをstrawberryファイルへリネームする
 
+- [ ] 重さが0の場合のケースを考慮すること (現状は考慮していない。)
