@@ -65,7 +65,7 @@ v0.1(TODO 洗い出し)
 
 - [] Strawberryに関わるコードを削除する。
   - [x] まずStrawberryを削除する為のTODOを洗い出すこと!!
-  - [] 🍓→🍓2への移行作業
+  - [x] 🍓→🍓2への移行作業
     - [x] モジュール分割を行う
       - [x] strawberry.spec.tsからStrawberry2オブジェクトを対象のテストコードをstrawberry2.spec.tsに移行する
       - [x] strawberry.tsからStrawberry2に関わるプロダクトコードをstrawberry2.tsに移行する
