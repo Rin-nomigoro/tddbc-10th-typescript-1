@@ -69,7 +69,7 @@ v0.1(TODO 洗い出し)
     - [x] モジュール分割を行う
       - [x] strawberry.spec.tsからStrawberry2オブジェクトを対象のテストコードをstrawberry2.spec.tsに移行する
       - [x] strawberry.tsからStrawberry2に関わるプロダクトコードをstrawberry2.tsに移行する
-    - [] strawberry.spec.tsを削除する
-    - [] strawberry.tsを削除する
+    - [x] strawberry.spec.tsを削除する
+    - [x] strawberry.tsを削除する
     - [] strawberry2ファイルをstrawberryファイルへリネームする
 
