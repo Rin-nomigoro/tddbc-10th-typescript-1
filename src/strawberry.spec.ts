@@ -33,7 +33,7 @@ describe('Strawberry', () => {
             [24, 'L'],
             [25, 'LL'],
         ])(
-            '入力した重さに%dgと入力し、サイズが%sと取得できること ',
+            '重さが%dgと入力し、サイズが%sと取得できること ',
             (weight, expectedSize) => {
                 const strawberry = new Strawberry('いちごの品種名', weight);
                 expect(strawberry.size).toBe(expectedSize);

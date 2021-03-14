@@ -1,5 +1,3 @@
-import { Extension } from 'typescript';
-
 export class Strawberry {
     variety: string;
     weight: number;
@@ -34,7 +32,9 @@ export class Strawberry {
             return 'LL';
         }
 
-        throw new Error('Error: 1g以上の重さを入力してください。');
+        throw new Error(
+            `Error: いちごの重さが${this.weight}の為、サイズが判定できません。1g以上の重さを入力してください。`
+        );
     }
 
     get label() {
